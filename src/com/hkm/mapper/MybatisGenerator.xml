@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hkm.mapper.SpecilMapper">
+    <select id="findSpecilSplif" parameterType="String" resultType="com.hkm.po.Speciliofo">
+            select * from speciliofo where ${columnNameLike} like concat('%',#{keyword},'%') order by ${columnNameOrder} desc limit #{start},#{pageSize}
+    </select>
+</mapper>
